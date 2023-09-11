@@ -12,6 +12,7 @@ export type AppStackParams = {
   Onboarding: undefined
   Home: NavigatorScreenParams<HomeNavigatorParams>
   ListItem: ListItemScreenParams
+  SectionList: undefined
 }
 
 const Stack = createNativeStackNavigator<AppStackParams>()
@@ -23,11 +24,12 @@ export const AppStack = observer(function() {
 
   return <Stack.Navigator
     screenOptions={{
-      headerShown: true,
+      headerShown: false,
     }}
     initialRouteName={ !doneInit ? "Onboarding" : "Home" }
   >
     <Stack.Screen name="Home" component={HomeNavigator} />
+    <Stack.Screen name="SectionList" component={Screens.SectionList} />
     <Stack.Screen name="ListItem" options={{ title: "Favorite" }} component={Screens.ListItem} initialParams={{ fav: true }} />
     <Stack.Screen options={{ headerShown: false }} name="Onboarding" component={Screens.Onboarding} />
   </Stack.Navigator>

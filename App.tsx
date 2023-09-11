@@ -16,6 +16,7 @@ const prefix = Linking.createURL("/")
 const config = {
   screens: {
     Onboarding: "onboarding",
+    SectionList: "section",
     /**
      * to go list by section id
      * adb shell am start -W -a android.intent.action.VIEW -d "exp://192.168.100.206:8081/--/list-item/false/581dfa67-a42c-48cf-9fef-cf1119704a37" host.exp.exponent
@@ -34,7 +35,7 @@ const config = {
     },
     Home: {
       screens: {
-        SectionList: "",
+        Wellcom: "",
         Grammar: "grammar",
         Music: "music",
         Settings: "settings"

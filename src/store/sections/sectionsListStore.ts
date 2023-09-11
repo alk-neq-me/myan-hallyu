@@ -5,12 +5,15 @@ import { SectionsStore } from "./sectionsStore"
 export class SectionsListStore {
   @persist("list")
   row: Array<SectionsStore> = []
+  @persist("list")
+  info_row: Array<SectionsStore> = []
   loading: boolean = false
   errors: Error[] = []
 
   constructor() {
     makeObservable(this, {
       row: observable,
+      info_row: observable,
       errors: observable,
       loading: observable,
 
@@ -33,7 +36,8 @@ export class SectionsListStore {
   /* Only run application setup */
   init = () => {
     this.makeIdle()
-    const list = require("@data/section.json").content
+    const list: Array<SectionsStore> = require("@data/section.json").content
     this.row = list
+    this.info_row = list.slice(0, 5)
   }
 }
