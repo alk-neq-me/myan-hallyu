@@ -1,0 +1,100 @@
+{
+  "content": [
+    {
+      "id": "581dfa67-a42c-48cf-9fef-cf1119704a37",
+      "name": "Alphabets"
+    },
+    {
+      "id": "7652604c-b09a-4bf0-b5de-98bcba2ae5c0",
+      "name": "Common"
+    },
+    {
+      "id": "2678e06a-135b-4781-ae95-436a66647760",
+      "name": "Emergency"
+    },
+    {
+      "id": "ad9022b5-13b5-435b-adda-9c224815b22d",
+      "name": "Romance"
+    },
+    {
+      "id": "7491b0bf-e3f5-4fcf-a459-70c93fab85dd",
+      "name": "Eating"
+    },
+    {
+      "id": "e0ef606b-2819-4637-bdaf-8af93d47d374",
+      "name": "Greetings"
+    },
+    {
+      "id": "75e4cb87-98ca-44ab-b3d6-cf5647a86500",
+      "name": "Shopping"
+    },
+    {
+      "id": "ef02c23c-2028-4e75-a36c-5d3089ac95bb",
+      "name": "Numbers"
+    },
+    {
+      "id": "f2c9b7a2-1a13-4fdf-a44d-b505367fe7c9",
+      "name": "Transportation"
+    },
+    {
+      "id": "e871e6c8-97c2-4ce7-b0fe-3156579450c2",
+      "name": "Directions"
+    },
+    {
+      "id": "afcb255c-86a8-4a7d-aa33-a8ea21b6df8a",
+      "name": "Driving"
+    },
+    {
+      "id": "e0f38e17-b7fb-4a29-9462-ca2700fa572e",
+      "name": "Places"
+    },
+    {
+      "id": "e9274469-13e0-4ff8-a064-39550d813452",
+      "name": "Sightseeing"
+    },
+    {
+      "id": "5f09925f-7bd7-43c4-92e1-bb05ad5017bb",
+      "name": "Animals"
+    },
+    {
+      "id": "b2f7421a-9ed0-4ad1-95f7-8a3807c5f624",
+      "name": "Time"
+    },
+    {
+      "id": "9397312d-8dcb-4ca0-9414-a9e808091745",
+      "name": "Studies"
+    },
+    {
+      "id": "b6a1f156-71ff-433a-b848-97bb3f0919d3",
+      "name": "Occupations"
+    },
+    {
+      "id": "94734ccf-d0dc-4648-b5cd-90654b1fd981",
+      "name": "Fruits"
+    },
+    {
+      "id": "ba14d4ca-1fa7-4a44-b36f-c9a80c3a64de",
+      "name": "Hobbies"
+    },
+    {
+      "id": "e81ff042-d074-4e4c-967c-7f13fe8762b5",
+      "name": "Health"
+    },
+    {
+      "id": "b5d30401-2b5e-4967-8fc5-f0dcc6467fb4",
+      "name": "Date"
+    },
+    {
+      "id": "fb80fcb7-09d7-4b7c-9fd2-5028a064944e",
+      "name": "Colors"
+    },
+    {
+      "id": "7c632206-5014-4d86-a249-078b65c9fa92",
+      "name": "Accommodation"
+    },
+    {
+      "id": "dedf7db0-683c-4a02-b472-dc1b6476cec5",
+      "name": "Weather"
+    }
+  ]
+}
