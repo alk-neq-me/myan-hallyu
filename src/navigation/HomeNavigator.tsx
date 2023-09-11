@@ -25,6 +25,8 @@ export function HomeNavigator() {
     }}
   >
     <Tab.Screen name="SectionList" component={Screens.SectionList} />
+    <Tab.Screen name="Grammar" component={Screens.Grammar} />
+    <Tab.Screen name="Music" component={Screens.Music} />
     <Tab.Screen name="Settings" component={Screens.Settings} />
   </Tab.Navigator>
 }

@@ -3,6 +3,14 @@ import { AppNavigator } from "@/navigation";
 import { SafeAreaProvider, initialWindowMetrics } from "react-native-safe-area-context";
 import * as Linking from 'expo-linking';
 import { Text } from "@/components/ui";
+import { LogBox } from "react-native";
+
+// Note that I’m using the ‘native-base’ package. 
+// There is a little bug for the package in React 18
+// So, Ignore This - [remove warn yellow box]
+LogBox.ignoreLogs([
+  'In React 18, SSRProvider is not necessary and is a noop. You can remove it from your app.',
+])
 
 const prefix = Linking.createURL("/")
 const config = {

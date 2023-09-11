@@ -1,7 +1,7 @@
 import React from 'react'
-import { TextProps as RNTextProps, Text as RNText } from 'react-native'
+import { Text as RNText } from 'native-base'
 
-interface TextProps extends RNTextProps {
+interface TextProps extends Partial<React.ComponentProps<typeof RNText>> {
   tx?: string
   text?: string;
   children?: React.ReactNode
