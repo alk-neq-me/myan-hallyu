@@ -1,8 +1,8 @@
 import { 
-  Button as RNButton,
+  Button as UIButton,
 } from 'native-base'
 
-interface ButtonProps extends Partial<React.ComponentProps<typeof RNButton>> {
+interface ButtonProps extends Partial<React.ComponentProps<typeof UIButton>> {
   tx?: string
   title?: string;
   children?: React.ReactNode
@@ -13,6 +13,6 @@ export function Button(props: ButtonProps) {
   const content = children ?? (tx ? tx : title)
 
   return (
-    <RNButton {...rest}>{content}</RNButton>
+    <UIButton {...rest}>{content}</UIButton>
   )
 }

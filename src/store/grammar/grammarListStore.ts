@@ -1,10 +1,10 @@
-import { action, computed, makeObservable, observable } from "mobx"
+import { action, makeObservable, observable } from "mobx"
 import { persist } from "mobx-persist"
-import { SectionsStore } from "./sectionsStore"
+import { GrammarStore } from "./grammarStore"
 
-export class SectionsListStore {
+export class GrammarListStore {
   @persist("list")
-  row: Array<SectionsStore> = []
+  row: Array<GrammarStore> = []
   loading: boolean = false
   errors: Error[] = []
 
@@ -16,14 +16,8 @@ export class SectionsListStore {
 
       init: action,
       reset: action,
-      makeIdle: action,
-
-      info_row: computed,
+      makeIdle: action
     })
-  }
-
-  get info_row() {
-    return this.row.slice(0, 3)
   }
 
   reset = () => {
@@ -36,10 +30,15 @@ export class SectionsListStore {
     this.loading = false
   }
 
+  loadBySectionId = (id: string) => {
+    return this.row.filter(i => i.grammar_section_id === id)
+  }
+
   /* Only run application setup */
   init = () => {
     this.makeIdle()
-    const list: Array<SectionsStore> = require("@data/section.json").content
+    const list: Array<GrammarStore> = [] // require("@data/list.json").content
     this.row = list
   }
 }
+

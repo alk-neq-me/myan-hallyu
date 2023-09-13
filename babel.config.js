@@ -7,7 +7,8 @@ module.exports = function(api) {
         root: ["."],
         alias: {
           "@": "./src",
-          "@data": "./src/lib/storage/data"
+          "@data": "./src/lib/storage/data",
+          "@assets": "./assets/img"
         }
       }]
     ]

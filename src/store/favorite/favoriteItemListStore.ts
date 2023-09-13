@@ -5,12 +5,12 @@ import { ItemStore } from "../items/itemStore"
 export class FavoriteItemListStore {
   @persist("list")
   row: Array<ItemStore> = []
-  errors: Error[] = []
+  loading: boolean = false
 
   constructor() {
     makeObservable(this, {
       row: observable,
-      errors: observable,
+      loading: observable,
 
       toggleFavorite: action,
       reset: action,
@@ -20,19 +20,23 @@ export class FavoriteItemListStore {
 
   reset = () => {
     this.row = []
-    this.errors = []
+    this.loading = false
   }
 
   toggleFavorite = (list: ItemStore) => {
-    const exists = this.row.findIndex(i => i.id === list.id)
-    if (exists !== -1) { this.row.splice(exists, 1) }
-    else { this.row.push(list) }
-
-    this.errors = []
+    this.loading = true
+    if (list.isLiked) {
+      list.isLiked = false
+      const idx = this.row.findIndex(i => i.id === list.id)
+      this.row.splice(idx, 1)
+    } else { 
+      list.isLiked = true
+      this.row.push(list) 
+    }
+    this.loading = false
   }
 
   findFavoritebyId = (id: string) => {
-    const exists = this.row.find(i => i.id === id)
-    return exists?.id
+    return this.row.find(i => i.id === id)?.id
   }
 }

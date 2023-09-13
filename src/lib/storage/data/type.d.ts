@@ -11,6 +11,7 @@ interface List {
   sound: string | null  // Currently not available
   record?: string | null
   section_id: string
+  isLiked: boolean
 }
 
 interface Favorite {

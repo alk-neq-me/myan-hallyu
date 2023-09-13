@@ -24,12 +24,13 @@ export function HomeNavigator() {
   return <Tab.Navigator
     screenOptions={{
       headerShown: false,
+      tabBarStyle: { height: 60 }
     }}
     initialRouteName="Wellcome"
   >
     <Tab.Screen 
       name="Wellcome" 
-      component={Screens.Wellcome} 
+      component={Screens.WellcomeScreen} 
       options={{ 
         tabBarLabel: "Home",
         tabBarIcon: (props) => <Feather 
@@ -40,19 +41,8 @@ export function HomeNavigator() {
       }} 
     />
     <Tab.Screen 
-      name="Grammar" 
-      component={Screens.Grammar} 
-      options={{ 
-        tabBarIcon: (props) => <MaterialCommunityIcons 
-          name="sticker-text" 
-          size={20} 
-          color={props.focused ? theme.colors.primary[600] : "black"} 
-        />
-      }} 
-    />
-    <Tab.Screen 
       name="Music" 
-      component={Screens.Music} 
+      component={Screens.MusicScreen} 
       options={{ 
         tabBarIcon: (props) => <Fontisto 
           name="applemusic" 
@@ -62,8 +52,19 @@ export function HomeNavigator() {
       }} 
     />
     <Tab.Screen 
+      name="Grammar" 
+      component={Screens.GrammarScreen} 
+      options={{ 
+        tabBarIcon: (props) => <MaterialCommunityIcons 
+          name="sticker-text" 
+          size={20} 
+          color={props.focused ? theme.colors.primary[600] : "black"} 
+        />
+      }} 
+    />
+    <Tab.Screen 
       name="Settings" 
-      component={Screens.Settings} 
+      component={Screens.SettingsScreen} 
       options={{ 
         tabBarIcon: (props) => <MaterialIcons 
           name="settings" 

@@ -29,8 +29,8 @@ export const AppStack = observer(function() {
     initialRouteName={ !doneInit ? "Onboarding" : "Home" }
   >
     <Stack.Screen name="Home" component={HomeNavigator} />
-    <Stack.Screen name="SectionList" component={Screens.SectionList} />
-    <Stack.Screen name="ListItem" options={{ title: "Favorite" }} component={Screens.ListItem} initialParams={{ fav: true }} />
-    <Stack.Screen options={{ headerShown: false }} name="Onboarding" component={Screens.Onboarding} />
+    <Stack.Screen name="SectionList" component={Screens.SectionsListScreen} />
+    <Stack.Screen name="ListItem" options={{ title: "Favorite" }} component={Screens.ListItemScreen} initialParams={{ fav: true }} />
+    <Stack.Screen options={{ headerShown: false }} name="Onboarding" component={Screens.OnboardingScreen} />
   </Stack.Navigator>
 })

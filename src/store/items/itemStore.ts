@@ -1,14 +1,14 @@
 import { action, makeObservable, observable } from 'mobx'
-import uuid from 'react-native-uuid'
 
 export class ItemStore implements List {
-  id: string = uuid.v1().toString()
+  id: string = ""
   korean: string = ""
   romaji: string = ""
   meaning: string = ""
   sound: string = ""
   record?: string | null = null
   section_id: string = ""
+  isLiked: boolean = false
 
   constructor() {
     makeObservable(this, {
